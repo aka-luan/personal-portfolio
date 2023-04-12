@@ -8,10 +8,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        nunito: ['var(--font-nunito)']
-      }
-
+        nunito: ['var(--font-nunito)'],
+      },
+    },
+    colors: {
+      white: '#fffcf2ff',
+      gray: '#ccc5b9ff',
+      darkgray: '#403d39ff',
+      black: '#252422ff',
+      orange: '#eb5e28ff',
     },
   },
-  plugins: [],  
-}
+  plugins: [],
+};
