@@ -18,7 +18,7 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className='flex px-6 pb-6 pt-3 justify-between items-center text-black font-medium'>
-            <div className='md:flex-1  hidden md:block'>
+            <div className='md:flex-1 hidden md:block'>
               <div className='flex xl:space-x-4'>
                 {navigation.map((item) => (
                   <a
@@ -33,12 +33,12 @@ export default function Navbar() {
             </div>
             <div className='md:hidden'>
               <Disclosure.Button>
-              
-                {open ? (
+                  <div className='w-7 h-0.5 bg-black rounded'></div>
+                  {/* {open ? (
                   <XMarkIcon className='h-8 w-8 text-black cursor-pointer hover:text-purple'></XMarkIcon>
                 ) : (
                   <Bars2Icon className='h-8 w-8 text-black cursor-pointer hover:text-purple'></Bars2Icon>
-                )}
+                )} */}
               </Disclosure.Button>
             </div>
             <div className='md:flex-1 flex justify-center'>
