@@ -12,7 +12,7 @@ const navigation = [
   { name: 'Experience', href: '#', current: false },
 ];
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <Disclosure as='nav'>
       {({ open }) => (
@@ -33,8 +33,12 @@ export default function Navbar() {
             </div>
             <div className='md:hidden'>
               <Disclosure.Button>
-                  <div className='w-7 h-0.5 bg-black rounded'></div>
-                  {/* {open ? (
+                <div className='w-7 h-0.5 bg-black rounded absolute top-4 -mt-0.5
+                before:content-[""] before:bg-black before:w-7 before:h-0.5 before:rounded before:absolute
+                before:transition-all before:duration-500 before:-translate-x-5 before:translate-y-2
+                after:content-[""] after:bg-black after:w-7 after:h-0.5 after:rounded after:absolute
+                after:transition-all after:duration-500 after:-translate-x-4 after:translate-y-4'></div>
+                {/* {open ? (
                   <XMarkIcon className='h-8 w-8 text-black cursor-pointer hover:text-purple'></XMarkIcon>
                 ) : (
                   <Bars2Icon className='h-8 w-8 text-black cursor-pointer hover:text-purple'></Bars2Icon>
@@ -43,7 +47,7 @@ export default function Navbar() {
             </div>
             <div className='md:flex-1 flex justify-center'>
               <Image
-                className='h-16 w-16 md:h-20 md:w-20'
+                className='h-14 w-14 md:h-20 md:w-20'
                 src={logo}
                 alt='white L inside a black circle'
               />
@@ -62,8 +66,8 @@ export default function Navbar() {
             leave='transition duration-75 ease-out'
             leaveFrom='transform scale-100 opacity-100'
             leaveTo='transform scale-95 opacity-0'
-            >
-            <Disclosure.Panel  className='bg-black absolute inset-0 h-screen'>
+          >
+            <Disclosure.Panel className='bg-black absolute inset-0 h-screen'>
               <div>adsasds</div>
             </Disclosure.Panel>
           </Transition>
@@ -72,3 +76,5 @@ export default function Navbar() {
     </Disclosure>
   );
 }
+
+export default Navbar
