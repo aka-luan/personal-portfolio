@@ -12,6 +12,7 @@ module.exports = {
       },
     },
     colors: {
+      transparent: 'transparent',
       white: '#fffff',
       gray: '#eeeeee',
       purple: '#7971ea',

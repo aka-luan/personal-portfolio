@@ -13,6 +13,7 @@ const navigation = [
 ];
 
 const Navbar = () => {
+
   return (
     <Disclosure as='nav'>
       {({ open }) => (
@@ -32,12 +33,10 @@ const Navbar = () => {
               </div>
             </div>
             <div className='md:hidden'>
-              <Disclosure.Button>
-                <div className='w-7 h-0.5 bg-black rounded absolute top-4 -mt-0.5
-                before:content-[""] before:bg-black before:w-7 before:h-0.5 before:rounded before:absolute
-                before:transition-all before:duration-500 before:-translate-x-5 before:translate-y-2
-                after:content-[""] after:bg-black after:w-7 after:h-0.5 after:rounded after:absolute
-                after:transition-all after:duration-500 after:-translate-x-4 after:translate-y-4'></div>
+              <Disclosure.Button className={open ? `toggle-btn` : ''}>
+                <span className='bg-black w-8 h-1 rounded absolute top-10 -mt-0.5 transition-all duration-500 -translate-y-3'></span>
+                <span className='bg-black w-8 h-1 rounded absolute top-10 -mt-0.5 transition-all duration-500 -translate-x-2'></span>
+                <span className='bg-black w-8 h-1 rounded absolute top-10 -mt-0.5 transition-all duration-500 translate-y-3'></span>
                 {/* {open ? (
                   <XMarkIcon className='h-8 w-8 text-black cursor-pointer hover:text-purple'></XMarkIcon>
                 ) : (
