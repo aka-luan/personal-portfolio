@@ -17,8 +17,8 @@ const Navbar = () => {
   return (
     <Disclosure as='nav'>
       {({ open }) => (
-        <>
-          <div className='flex px-6 pb-6 pt-3 justify-between items-center text-black font-medium'>
+        <>  
+          <div className='flex px-6 py-3 justify-between items-center text-black font-medium'>
             <div className='md:flex-1 hidden md:block'>
               <div className='flex xl:space-x-4'>
                 {navigation.map((item) => (
@@ -59,15 +59,25 @@ const Navbar = () => {
           </div>
 
           <Transition
-            enter='transition duration-100 ease-out'
-            enterFrom='transform scale-95 opacity-0'
-            enterTo='transform scale-100 opacity-100'
-            leave='transition duration-75 ease-out'
-            leaveFrom='transform scale-100 opacity-100'
-            leaveTo='transform scale-95 opacity-0'
+            enter="transition-all duration-500"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-all duration-500"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
           >
-            <Disclosure.Panel className='bg-black absolute inset-0 h-screen'>
-              <div>adsasds</div>
+            <Disclosure.Panel className='bg-white absolute top-68 w-full origin-top'>
+              <div className='flex flex-col gap-6 justify-center items-center min-h-[calc(100vh-80px)]'>
+                {navigation.map((item) => (
+                  <a
+                    className='hover:text-purple font-semibold text-3xl px-3 py-2 transition duration-300 ease-in-out'
+                    key={item.name}
+                    href={item.href}
+                    aria-current={item.current ? 'page' : undefined}>
+                    {item.name}
+                  </a>
+                ))}
+              </div>
             </Disclosure.Panel>
           </Transition>
         </>
