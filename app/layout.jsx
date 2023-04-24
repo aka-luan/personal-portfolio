@@ -12,8 +12,8 @@ const nunito = Nunito({
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${nunito.className} bg-white text-xs lg:text-base`}>
-        <div className='container mx-auto'>
+      <body className={`${nunito.className} bg-white font-medium`}>
+        <div className='container mx-auto xl:max-w-7xl'>
           <Navbar />
           {children}
         </div>
