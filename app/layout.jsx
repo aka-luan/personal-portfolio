@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${nunito.className} bg-white`}>
-        <div className='container mx-auto xl:max-w-7xl'>
+        <div className='container relative max-w-screen mx-auto xl:max-w-9xl overflow-hidden'>
           <Navbar />
           {children}
         </div>
