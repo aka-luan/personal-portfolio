@@ -66,7 +66,7 @@ const Navbar = () => {
             leaveTo="opacity-0"
           >
             <Disclosure.Panel className='bg-white absolute z-20 top-0 w-full h-screen origin-top'>
-              <div className='flex flex-col gap-6 justify-center items-center h-[calc(100vh-120px)] w-screen'>
+              <div className='flex flex-col gap-6 justify-center items-center h-screen w-screen'>
                 {navigation.map((item) => (
                   <a
                     className='hover:text-purple font-semibold text-3xl px-3 py-2 transition duration-300 ease-in-out'
