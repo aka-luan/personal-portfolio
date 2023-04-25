@@ -33,7 +33,7 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-            <div className='md:hidden relative z-30'>
+            <div className='md:hidden z-30'>
               <Disclosure.Button className={` ${open ? `toggle-btn` : ''}`}>
                 <span className='bg-black w-8 h-1 rounded absolute top-11 -mt-0.5 transition-all duration-500 -translate-y-3'></span>
                 <span className='bg-black w-8 h-1 rounded absolute top-11 -mt-0.5 transition-all duration-500 -translate-x-2'></span>
