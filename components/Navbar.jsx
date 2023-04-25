@@ -19,7 +19,7 @@ const Navbar = () => {
     <Disclosure as='nav'>
       {({ open }) => (
         <>  
-          <div className='flex px-5 py-3 justify-between items-center text-black'>
+          <div className='z-10 flex px-5 py-3 justify-between items-center text-black'>
             <div className='md:flex-1 hidden md:block'>
               <div className='flex space-x-6 xl:space-x-10'>
                 {navigation.map((item) => (
@@ -33,7 +33,7 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-            <div className='md:hidden'>
+            <div className='md:hidden relative z-30'>
               <Disclosure.Button className={` ${open ? `toggle-btn` : ''}`}>
                 <span className='bg-black w-8 h-1 rounded absolute top-11 -mt-0.5 transition-all duration-500 -translate-y-3'></span>
                 <span className='bg-black w-8 h-1 rounded absolute top-11 -mt-0.5 transition-all duration-500 -translate-x-2'></span>
@@ -65,8 +65,8 @@ const Navbar = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Disclosure.Panel className='bg-white absolute top-68 w-full origin-top'>
-              <div className='flex flex-col gap-6 justify-center items-center min-h-[calc(100vh-120px)]'>
+            <Disclosure.Panel className='bg-white absolute z-20 top-0 w-full h-screen origin-top'>
+              <div className='flex flex-col gap-6 justify-center items-center h-[calc(100vh-120px)] w-screen'>
                 {navigation.map((item) => (
                   <a
                     className='hover:text-purple font-semibold text-3xl px-3 py-2 transition duration-300 ease-in-out'
