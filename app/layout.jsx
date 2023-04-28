@@ -12,8 +12,8 @@ const nunito = Nunito({
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${nunito.className} bg-white overflow-hidden`}>
-        <div className='lg:container relative max-w-full lg:m-auto max-[767px]:overflow-hidden xl:max-w-9xl'>
+      <body className={`${nunito.className} bg-white`}>
+        <div className='lg:container lg:m-auto max-[767px]:overflow-hidden xl:max-w-9xl'>
           <Navbar />
           {children}
         </div>
