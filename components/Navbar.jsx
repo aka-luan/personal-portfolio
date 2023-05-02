@@ -19,7 +19,7 @@ const Navbar = () => {
     <Disclosure as='nav'>
       {({ open }) => (
         <>  
-          <div className='z-10 flex px-5 py-3 justify-between items-center text-black'>
+          <div className='z-10 flex px-5 py-3 justify-between items-center text-black font-medium'>
             <div className='md:flex-1 hidden md:block'>
               <div className='flex space-x-6 xl:space-x-10'>
                 {navigation.map((item) => (
