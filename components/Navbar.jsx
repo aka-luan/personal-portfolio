@@ -20,7 +20,7 @@ const Navbar = () => {
       {({ open }) => (
         <>  
           <div className='z-10 flex px-5 py-3 justify-between items-center text-black font-medium'>
-            <div className='md:flex-1 hidden md:block'>
+            <div className='lg:flex-1 hidden lg:block'>
               <div className='flex space-x-6 xl:space-x-10'>
                 {navigation.map((item) => (
                   <a
@@ -33,7 +33,7 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-            <div className='md:hidden z-30'>
+            <div className='lg:hidden z-30'>
               <Disclosure.Button className={` ${open ? `toggle-btn` : ''}`}>
                 <span className='bg-black w-8 h-1 rounded absolute top-11 -mt-0.5 transition-all duration-500 -translate-y-3'></span>
                 <span className='bg-black w-8 h-1 rounded absolute top-11 -mt-0.5 transition-all duration-500 -translate-x-2'></span>
@@ -45,14 +45,14 @@ const Navbar = () => {
                 )} */}
               </Disclosure.Button>
             </div>
-            <div className='md:flex-1 flex justify-center'>
+            <div className='lg:flex-1 flex justify-center'>
               <Image
                 className='h-16 w-16 md:h-20 md:w-20'
                 src={logo}
                 alt='white letter L inside a black circle'
               />
             </div>
-            <div className='md:flex-1 hidden md:flex justify-end'>
+            <div className='lg:flex-1 hidden lg:flex justify-end'>
               <Button className={'bg-black text-white'}>Contact me</Button>
             </div>
           </div>
